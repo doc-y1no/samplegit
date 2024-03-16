@@ -1,0 +1,15 @@
+reset.css
+http://html5doctor.com/html-5-reset-stylesheet/
+normalize.css
+https://necolas.github.io/normalize.css/
+コマンドインスト―ルの場合以下実行：
+npm install normalize.css
+
+normalize.cssの使い方
+まずは、Normalize.cssのページから、ダウンロードしてください。
+
+その後、制作しているフォルダーの中に格納しましょう。そして、head内にlinkでnormalize.cssへのファイルパスrelで記載すれば完了です。
+
+注意点としては、reset.cssでも同様ですが、自分で書き進めているCSSファイルがある場合は、それよりも上の行に読み込ませる必要があります。
+
+CSSは、同じクラスに違う値を与えている記述が複数あった場合、より下の行に書いてあるCSSを最新として読み込んでいく性質があり、それはHTML上でも同様ということです。
