@@ -23,18 +23,18 @@
   <h1>redHTMLのタグに直接css記述、bluetitle下にcss記述、green.cssファイルを読み込んで記述</h1>
   <img src="/html-practice/index.html/images/23321187_s.jpg" alt="ハート"/>
   <p>headerテキスト</p>
-  <nav>
+  <nav class="nav--area">
     <ul>
-    <li><a href=""#>メニュー1</a></li>
-    <li><a href=""#>メニュー2</a></li>
-    <li><a href=""#>メニュー3</a></li>
+    <li class="li--area"><a href=""#>メニュー1</a></li>
+    <li class="li--area"><a href=""#>メニュー2</a></li>
+    <li class="li--noarea"><a href=""#>メニュー3</a></li>
     </ul>
     </nav>
 </header>
 
-<main>
+<main class="main--area">
   <article>
-    <h2>articel中⾒出し</h2>
+    <h2 >articel中⾒出し</h2>
     <a href="https://www.yahoo.co.jp/" target="_blank">yahoo</a>
     <p style="color: red;">HTMLタグに直接CSSを書く</p>
 
@@ -42,7 +42,7 @@
   <section>
     <div>
       <h3>div1section⼩⾒出し</h3>
-      <p>div1section⽂章</p>
+      <p id="section--area">div1section⽂章</p>
     </div>
     <div>
       <h3>div2section⼩⾒出し</h3>
@@ -51,11 +51,11 @@
   </section>
 </main>
 
-<aside>
+<aside id="aside--area">
   <h3>asideカテゴリー</h3>
   <p>aside⽂章</p>
 </aside>
-<h2>中⾒出し</h2>
+<h2 class="class--1" id="id--1">classとid指定IDが優先</h2>
 <p>⽂章</p>
 <h3>⼩⾒出し</h3>
 </body>

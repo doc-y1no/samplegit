@@ -2,3 +2,33 @@
 h2, h3 {
 color: green;
 }
+
+.nav--area {
+  font-size: 50px;
+  background-color: orange;
+}
+.li--area {
+  font-size: 32px;
+  color:aqua
+}
+#section--area {
+  background-color: blue;
+  color: white;
+  font-size: 32px;
+  margin: 30 auto;
+  padding: 10em;
+}
+.main--area {
+  font-size: 32px;
+  width: 1100px;
+  margin: 0 auto;
+  margin: 10em;
+}
+.class-1 {
+  float: inline-start;
+  font-size: 10px;
+}
+#id--1 {
+  float: inline-end;
+  font-size: 50px;
+}
