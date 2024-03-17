@@ -1,0 +1,188 @@
+position: relative; の使い方：
+position: relative; は現在位置を基準に、相対位置を指定することができます。
+position: relative; は単体で使用せず、position: absolute; とセットで使うことが多いです。
+
+positionプロパティはrelativeの他にも下記の4つがあります。
+
+absolute
+fixed
+static
+sticky
+
+positionプロパティは
+・top
+・right
+・bottom
+・left
+の4つのプロパティと合わせて要素の配置を指定。
+4つ全てを使わずに適用することが可能
+要素の位置を確定させるため、最低でも2つは適用する
+
+◆要素の現在位置を基準に相対位置を指定するposition: relative; の使い方
+<div class="box"></div>
+.box {
+  width: 200px;
+  height: 200px;
+  background: orange;
+    position: relative; /*追記*/
+  top: 50px; /*追記*/
+  left: 50px; /*追記*/
+}
+→pxで配置位置を指定する。
+
+
+◆position: relative; の特徴1 - 要素を移動しても、要素の高さを維持したまま配置
+position: relative; は、要素の高さを維持したまま配置する。下にある要素が詰まらない
+
+◆position: relative; の特徴2 - z-indexで重なり順を指定できる
+z-indexを指定しない場合は、boxクラス要素はposition: relative; を適用していないmin-boxクラス要素に対して上に重なるように配置される。
+  z-index: -1;　を追記して、positionを指定した要素を下に持ってくることもできる。
+  要素の重なり順を指定する場合は、z-indexプロパティを適用する。
+  ただし、positionプロパティ（relative, absolute, fixed, sticky）の適用が必要になる。
+  staticはz-indexは反映されない。
+
+
+position:absolute;とは
+absoluteは絶対配置を指定する値
+今いる場所にかかわらず、原点からどれだけ離れた距離に配置されているのかを示す。
+つまり起点からどれだけ離れているかを指定できるようになります。
+
+デフォルトの起点はページ全体
+そのページの一番上から一番下、一番左から一番右までを基準にする
+起点からどれだけ離れているかを指定することで、位置を決めることができる。
+ボックスを並べるよりも自由に配置できる。
+
+指定方法：
+自由に配置したい要素position:absolute;を指定するだけ
+ーーーーーーーーーーーーーーーーーーーーーーーーーー
+HTML
+
+<div class="absolute_test">
+    絶対配置になります
+</div>
+CSS
+
+.absolute_test {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    background-color: #ccc;     /* 背景色指定 */
+    padding:  20px;             /* 余白指定 */
+    left:  50px;                /* 左からの位置指定 */
+    top: 50px;                  /* 上からの位置指定 */
+}
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+位置の指定は、top、bottom、left、rightで行なう。　※relativeとおなじ指定方法
+
+top	要素が起点の上からどれだけ離れているかを示します
+bottom	要素が起点の下からどれだけ離れているかを示します
+left	要素が起点の左からどれだけ離れているかを示します
+right	要素が起点の右からどれだけ離れているかを示します
+
+absoluteの起点を指定する。
+何も指定していなければページ全体が起点。
+親要素に指定を加えることで、親要素を起点にすることができる。
+
+起点指定方法：
+親要素にrelativeかfixedをつける
+
+ーーーーーーーーーーーーーーーーーーーー
+HTML
+
+<div class="absolute_parent">
+    <div class="absolute_test">
+        絶対配置になります
+    </div>
+</div>
+CSS
+
+.absolute_parent {
+    position:  relative;        /* 要素の配置方法をと子要素の起点を指定 */
+    left:  30px;                /* 左からの表示位置 */
+    top: 30px;                  /* 上からの表示位置 */
+    border: solid 2px red;      /* 枠線指定 */
+    height:  190px;             /* 高さ指定 */
+    width: 500px;               /* 幅指定 */
+}
+
+.absolute_test {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    background-color: #ccc;     /* 背景色指定 */
+    padding:  20px;             /* 余白指定 */
+    left:  50px;                /* 右からの位置指定 */
+    top: 50px;                  /* 上からの位置指定 */
+}
+ーーーーーーーーーーーーーーーーーーーー
+
+relativeとabsoluteはセットで使う。
+※注：absoluteはレイアウトを自由にできますが、その分レイアウトの崩れを招きやすい諸刃のプロパティ
+  デフォルトではページ全体を起点にしてるので、パソコンの画面サイズによってはとんでもない場所に配置されてしまう危険もある。
+そのため、起点を決めておく必要がある。
+起点を指定するために、使うときに親要素にrelativeをつけておく。
+
+position:absolute;を使ったレイアウト例：
+
+
+画像の上にキャプションを乗せる：
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+HTML
+
+<div class="img_area">
+    画像
+    <div class="caption_area">
+        キャプションが入ります。キャプションが入ります。キャプションが入ります。
+    </div>
+</div>
+CSS
+
+.img_area {
+    position:  relative;        /* 子要素の起点を指定 */
+    height:  200px;             /* 高さ指定 */
+    width:  200px;              /* 幅指定 */
+    background-color:  #ccc;    /* 背景色指定 */
+}
+
+.caption_area {
+    position:  absolute;                    /* 要素の配置方法を指定 */
+    width:  100%;                           /* 幅指定 */
+    background-color: rgba(0, 0, 0, 0.7);   /* 背景色指定 */
+    color:  #fff;                           /* 文字色指定 */
+    padding:  5px;                          /* 余白指定 */
+    box-sizing:  border-box;                /* 崩れ防止 */
+    bottom:  0;                             /* 下からの位置を指定 */
+    font-size: 14px;                        /* フォントサイズ指定 */
+}
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+上下左右中央揃えでロゴを真ん中に配置：
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+HTML
+
+<div class="img_area">
+    背景画像
+    <div class="caption_area">
+        ロゴ
+    </div>
+</div>
+CSS
+
+.img_area {
+    position:  relative;        /* 子要素の起点を指定 */
+    background-color:  #ccc;    /* 背景色指定 */
+    height: 220px;              /* 高さ指定 */
+}
+
+.caption_area {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    background-color:  #555;    /* 背景色指定 */
+    color:  #fff;               /* 文字色指定 */
+    padding: 20px;              /* 余白指定 */
+    width:  200px;              /* 幅指定 */
+    height: 45px;               /* 高さ指定 */
+    text-align:  center;        /* 文字を中央揃えに */
+    font-size: 30px;            /* フォントサイズ指定 */
+    top:  0;                    /* 上からの位置指定 */
+    bottom:  0;                 /* 下からの位置指定 */
+    left:  0;                   /* 左からの位置指定 */
+    right:  0;                  /* 右からの位置指定 */
+    margin:  auto;              /* 位置調整と組み合わせて上下中央に */
+}
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー

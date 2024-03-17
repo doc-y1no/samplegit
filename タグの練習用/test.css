@@ -1,0 +1,51 @@
+.box {
+  width: 400px;
+  height: 200px;
+  background: orange;
+  position: relative;
+  top: 50px;
+  left: 80px;
+  z-index: -1;
+}
+.in-box {
+  position: absolute;
+  background: blue;
+  height: 50%;
+  width:  80%;
+  box-sizing:  border-box;
+  top: 25%;
+  right: 10%
+}
+.more-in-box {
+  position: absolute;
+  background: green;
+  height: 20%;
+  width:  20%;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.more-in-box2 {
+  position: absolute;
+  background: yellow;
+  height: 20%;
+  width:  20%;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.more-in-box3 {
+  position: absolute;
+  background: orange;
+  height: 20%;
+  width:  20%;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

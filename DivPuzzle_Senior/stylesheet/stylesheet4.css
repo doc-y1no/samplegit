@@ -1,0 +1,87 @@
+div {
+    width: 400px;
+    height: 450px;
+}
+.top-red-box {
+  position: relative;
+  height: 100px;
+  background: #ff0000;
+  z-index: -1;
+}
+.white-rectangle {
+  height: 60px;
+  width: 160px;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.mini-square1 {
+  height: 40px;
+  width: 40px;
+  background: #a9004b;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.mini-square2 {
+  height: 40px;
+  width: 40px;
+  background: #a9004b;
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+.mini-square3 {
+  height: 40px;
+  width: 40px;
+  background: #a9004b;
+  position: absolute;
+  top: 10px;
+  right: 110px;
+}
+.left-green-box {
+  float: left;
+  width: 150px;
+  height: 250px;
+  background: #00ff51
+}
+.right-brown-box {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 250px;
+  background: #8c2727;
+}
+.mini-rectangle1 {
+  height: 40px;
+  width: 140px;
+  background-color: #ff863f;
+  border: solid#ffffff 5px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.mini-rectangle2 {
+  height: 40px;
+  width: 140px;
+  background-color: #ff863f;
+  border: solid#ffffff 5px;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+.mini-rectangle3 {
+  height: 40px;
+  width: 140px;
+  background-color: #ff863f;
+  border: solid#ffffff 5px;
+  position: absolute;
+  top: 160px;
+  left: 40px;
+}
+.footer-yellow-box {
+  clear: left;
+  height: 100px;
+  background: #ffd000;
+}
