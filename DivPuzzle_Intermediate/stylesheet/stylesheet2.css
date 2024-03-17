@@ -1,0 +1,32 @@
+@charset "utf-8";
+.clearfix::after {
+  content: “”;
+  display: block;
+  clear: both;
+  }
+
+  div {
+    width: 400px;
+    height: 450px;
+  }
+.top-red-box {
+  height: 100px;
+  background: #ff0000;
+}
+.left-green-box {
+  float: left;
+  width: 150px;
+  height: 250px;
+  background: #00ff1e
+}
+.right-blue-box {
+  float: left;
+  width: 250px;
+  height: 250px;
+  background: #3300ff;
+}
+.footer-yellow-box {
+  clear: left;
+  height: 100px;
+  background: #ffe600;
+}

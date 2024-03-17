@@ -13,3 +13,44 @@ margin：
 オブジェクトの内部に余白を作成する。
 padding：
 オブジェクトの外部に余白を作成する。
+
+
+どのような場面で使い分けるか：
+https://eclair.blog/difference-between-margin-and-padding/
+
+基本は、要素の外側の余白にはmargin、
+要素の内側の余白にはpaddingを使う。
+
+親要素と子要素の間（親子間）の余白はpadding、
+隣り合った要素（兄弟間）の余白はmarginを使うようにすると、
+迷うことがなくなる。
+
+コーディングの際は、親の余白(padding)を設定してから子の余白(margin)を設定
+
+隣り合った要素の余白は上下左右一方向に対してのみ余白を設定すれば十分。
+例えば、上下にとなりあっていればmargin-top、
+左右にとなりあっていればmargin-left（右側のブロックにだけに設定）のようにあらかじめルールを決めておく
+と綺麗なコードが書きやすい。
+
+marginや、paddingは隣り合っている両方に設定があった場合数値が
+大きい方だけが設定されるためどこと隣り合わせる場合どちらに設定を入れるか、
+決めておくことが大事。
+
+margin（マージン）の特徴
+marginは要素を上下ないし左右に移動して隣り合った要素と余白を空けるために使用
+marginは要素の外側にできる余白なのでmarginに背景色はつけられない。
+負の値（マイナスの値）をとることができる。ネガティブマージンと呼ばれ、特定の場面で使うケースがある。
+横幅が固定されたブロック要素をmargin-left: auto; とmargin-right: auto; で水平方向に中央揃えにすることができる。
+flexアイテムにmargin-left: auto; をつけると余ったスペース分だけ左方向に余白を吸収。
+
+padding（パディング）の特徴
+paddingはその要素の内側の子要素との余白をあけるために使用。
+paddingは要素の内側にできる余白なのでその要素の背景色（background-color）と同じ色になる。paddingに直接背景色は指定できない。
+box-sizing: border-box; の時のwidthとheightの表示領域の計算にpaddingが含まれるようになる。
+パーセンテージ（%）で割合を指定するときに横幅をもとに計算される（padding-top: 50%; は横幅に対して50%の余白がpadding-topに指定。）（参考：https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block）
+
+margin-rightとmargin-left、margin-topとmargin-bottomのどちらを使えばよいか迷う場合：
+隣り合った要素の余白をつける場合に、margin-leftとmargin-right、margin-topとmargin-bottomのどちらを使えば良いのか使い分けに迷うシーンがでてくる。
+上記の場合、大抵どちらでも良いケースが大半、
+特別理由がなければ、自分の中でどちらかしか使わないとルールを決めておくことでコーディング時に無駄に迷うことがなくなる。
+余白の方向が統一されていなくてコードが読みにくいということも起こらない。
