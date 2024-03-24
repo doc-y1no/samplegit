@@ -1,42 +1,37 @@
-div {
+/* div {
     width: 400px;
     height: 450px;
-}
+} */
 .top-red-box {
   position: relative;
   height: 100px;
+  width: 400px;
   background: #ff0000;
-  z-index: -1;
+  /* z-index: -1; */
 }
 .white-rectangle {
   height: 60px;
   width: 160px;
   background: #fff;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
 }
-.mini-square1 {
+.mini-square {
   height: 40px;
   width: 40px;
   background: #a9004b;
   position: absolute;
+}
+.position-squ-1 {
   top: 10px;
   right: 10px;
 }
-.mini-square2 {
-  height: 40px;
-  width: 40px;
-  background: #a9004b;
-  position: absolute;
+.position-squ-2 {
   top: 10px;
   right: 60px;
 }
-.mini-square3 {
-  height: 40px;
-  width: 40px;
-  background: #a9004b;
-  position: absolute;
+.position-squ-3 {
   top: 10px;
   right: 110px;
 }
@@ -53,35 +48,28 @@ div {
   height: 250px;
   background: #8c2727;
 }
-.mini-rectangle1 {
+.mini-rectangle {
   height: 40px;
   width: 140px;
   background-color: #ff863f;
   border: solid#ffffff 5px;
   position: absolute;
+}
+.potision-rec-1 {
   top: 40px;
   left: 40px;
 }
-.mini-rectangle2 {
-  height: 40px;
-  width: 140px;
-  background-color: #ff863f;
-  border: solid#ffffff 5px;
-  position: absolute;
+.position-rec-2 {
   top: 100px;
   left: 40px;
 }
-.mini-rectangle3 {
-  height: 40px;
-  width: 140px;
-  background-color: #ff863f;
-  border: solid#ffffff 5px;
-  position: absolute;
+.position-rec-3 {
   top: 160px;
   left: 40px;
 }
 .footer-yellow-box {
   clear: left;
   height: 100px;
+  width: 400px;
   background: #ffd000;
 }
