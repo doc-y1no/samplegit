@@ -1,46 +1,36 @@
-/* div {
-    width: 400px;
-    height: 450px;
-} */
 .top-red-box {
   position: relative;
   height: 100px;
   width: 400px;
   background: #ff0000;
-  /* z-index: -1; */
 }
 .white-rectangle {
-  height: 60px;
-  width: 160px;
   background: #fff;
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+}
+/* mini-squareをまとめて形成する。クラス追加 */
+.square-parents {
+  display: flex;
+  padding: 5px;
 }
 .mini-square {
+  flex: 1;
   height: 40px;
   width: 40px;
   background: #a9004b;
-  position: absolute;
+  margin: 5px;
 }
-.position-squ-1 {
-  top: 10px;
-  right: 10px;
-}
-.position-squ-2 {
-  top: 10px;
-  right: 60px;
-}
-.position-squ-3 {
-  top: 10px;
-  right: 110px;
-}
+
 .left-green-box {
   float: left;
   width: 150px;
   height: 250px;
   background: #00ff51
 }
+
 .right-brown-box {
   position: relative;
   float: left;
@@ -48,25 +38,19 @@
   height: 250px;
   background: #8c2727;
 }
+/* mini-rectangleをまとめて形成する。クラス追加 */
+.rectangle-parents {
+  padding: 40px;
+}
 .mini-rectangle {
   height: 40px;
   width: 140px;
   background-color: #ff863f;
   border: solid#ffffff 5px;
-  position: absolute;
+  margin-bottom: 10px;
+  /* position: absolute; */
 }
-.potision-rec-1 {
-  top: 40px;
-  left: 40px;
-}
-.position-rec-2 {
-  top: 100px;
-  left: 40px;
-}
-.position-rec-3 {
-  top: 160px;
-  left: 40px;
-}
+
 .footer-yellow-box {
   clear: left;
   height: 100px;
